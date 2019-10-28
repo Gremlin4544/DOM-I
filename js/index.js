@@ -40,3 +40,25 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let cta = document.getElementById("cta-img");
+cta.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middle = document.getElementById("middle-img");
+middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//One way to do the nav 
+
+let head = document.querySelectorAll("nav a");
+head[0].textContent = siteContent["nav"]["nav-item-1"];
+head[1].textContent = siteContent["nav"]["nav-item-2"];
+head[2].textContent = siteContent["nav"]["nav-item-3"];
+head[3].textContent = siteContent["nav"]["nav-item-4"];
+head[4].textContent = siteContent["nav"]["nav-item-5"];
+head[5].textContent = siteContent["nav"]["nav-item-6"];
+
+//2nd way to do the nav 
+// let navItems = document.querySelectorAll('a');
+// for (i = 0; i < navItems.length; i++){
+//   navItems[i].innerText = siteContent.nav[`nav-item-${i + 1}`];
+// }
